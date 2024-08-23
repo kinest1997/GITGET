@@ -40,23 +40,22 @@ struct GitHubNetwork {
     }
     
     func getContributions(of username: String) -> AnyPublisher<[Contribution], GitHubNetworkError> {
-        guard let url = composeURLComponentsToGetContributions(of: username).url else {
-            let error = GitHubNetworkError.invalidURL
-            return Fail(error: error).eraseToAnyPublisher()
-        }
-        
-        do {
-            let html = try String(contentsOf: url, encoding: .utf8)
-            let document = try SwiftSoup.parse(html)
-            let contributions = try document.select("rect").compactMap(parseContributions)
-            return Just(contributions)
-                .mapError {
-                    GitHubNetworkError.error("###Error: \($0)")
-                }
-                .eraseToAnyPublisher()
-        } catch {
-            return Fail(error: .htmlParsingError).eraseToAnyPublisher()
-        }
+        var request = URLRequest(url: URL(string: "https://github-contributions-api.jogruber.de/v4/\(username)")!)
+        request.httpMethod = "GET"
+        return session.dataTaskPublisher(for: request)
+            .mapError({ _ in
+                GitHubNetworkError.invalidURL
+            })
+            .flatMap { data in
+                return Just(data.data)
+                    .print()
+                    .decode(type: ContributionResponse.self, decoder: JSONDecoder())
+                    .mapError { _ in
+                        GitHubNetworkError.jsonDecodingError
+                    }.map(\.contributions)
+                    .print()
+            }
+            .eraseToAnyPublisher()
     }
     
     func getUser(of username: String) -> AnyPublisher<User, GitHubNetworkError> {
