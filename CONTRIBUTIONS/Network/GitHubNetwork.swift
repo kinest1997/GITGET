@@ -52,7 +52,14 @@ struct GitHubNetwork {
                     .decode(type: ContributionResponse.self, decoder: JSONDecoder())
                     .mapError { _ in
                         GitHubNetworkError.jsonDecodingError
-                    }.map(\.contributions)
+                    }
+                    .map {
+                        return $0.contributions
+                            .filter {
+                                $0.date <= Date()
+                            }
+                            .sorted { $0.date > $1.date }
+                    }
                     .print()
             }
             .eraseToAnyPublisher()

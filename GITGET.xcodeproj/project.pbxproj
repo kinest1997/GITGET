@@ -74,6 +74,8 @@
 		7DED5C3925B099CB00C9574E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA986282598608900BAEAEA /* LaunchScreen.storyboard */; };
 		7DF5F9F628CDF7A30076B977 /* AccessoryWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5F9F528CDF7A30076B977 /* AccessoryWidgetContentView.swift */; };
 		7DF5F9F728CDF7A30076B977 /* AccessoryWidgetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5F9F528CDF7A30076B977 /* AccessoryWidgetContentView.swift */; };
+		91A883BF2C9D389C003FA828 /* AppleMyungjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A883BE2C9D389C003FA828 /* AppleMyungjo.ttf */; };
+		91A883C02C9D389C003FA828 /* AppleMyungjo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91A883BE2C9D389C003FA828 /* AppleMyungjo.ttf */; };
 		DB2C93629AEAFA8A934C9498 /* Pods_GITGET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B48DF6CED599606356AAEE /* Pods_GITGET.framework */; };
 		E91EC8F27334239CD5738F73 /* Pods_GITGETTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0143A5DB066010355EA637FC /* Pods_GITGETTests.framework */; };
 /* End PBXBuildFile section */
@@ -174,6 +176,7 @@
 		7DED5B6825B078B900C9574E /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		7DF5F9F528CDF7A30076B977 /* AccessoryWidgetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryWidgetContentView.swift; sourceTree = "<group>"; };
 		8B7DD08ECD4C71DA0793F4C3 /* Pods-GITGETTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GITGETTests.release.xcconfig"; path = "Target Support Files/Pods-GITGETTests/Pods-GITGETTests.release.xcconfig"; sourceTree = "<group>"; };
+		91A883BE2C9D389C003FA828 /* AppleMyungjo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleMyungjo.ttf; sourceTree = "<group>"; };
 		BEF0E3B4406B210DBE6A2D96 /* Pods-GITGET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GITGET.release.xcconfig"; path = "Target Support Files/Pods-GITGET/Pods-GITGET.release.xcconfig"; sourceTree = "<group>"; };
 		CB8B00E94D7C414EBE2B8089 /* Pods-GITGET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GITGET.debug.xcconfig"; path = "Target Support Files/Pods-GITGET/Pods-GITGET.debug.xcconfig"; sourceTree = "<group>"; };
 		F3B48DF6CED599606356AAEE /* Pods_GITGET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GITGET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +254,7 @@
 		7D3D3C5D25998FF400CCD1E9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				91A883BE2C9D389C003FA828 /* AppleMyungjo.ttf */,
 				7D4467DE25B2991500A90E6A /* GitHubWidget.intentdefinition */,
 				7DA9868C259862E600BAEAEA /* Assets.xcassets */,
 				7DA9868E259862E600BAEAEA /* Info.plist */,
@@ -524,7 +528,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					7DA986162598608700BAEAEA = {
 						CreatedOnToolsVersion = 12.3;
@@ -567,6 +571,7 @@
 				7DA986272598608900BAEAEA /* Assets.xcassets in Resources */,
 				7D4467A525B2939900A90E6A /* Localizable.strings in Resources */,
 				7DED5C3925B099CB00C9574E /* LaunchScreen.storyboard in Resources */,
+				91A883C02C9D389C003FA828 /* AppleMyungjo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +589,7 @@
 				7DA9868D259862E600BAEAEA /* Assets.xcassets in Resources */,
 				7DC011A325D0C62E007B6D9A /* Localizable.strings in Resources */,
 				7D4467F025B2B0E600A90E6A /* Localizable.stringsdict in Resources */,
+				91A883BF2C9D389C003FA828 /* AppleMyungjo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
