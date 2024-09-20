@@ -58,7 +58,7 @@ struct GitHubNetwork {
                             .filter {
                                 $0.date <= Date()
                             }
-                            .sorted { $0.date > $1.date }
+                            .sorted { $0.date < $1.date }
                     }
                     .print()
             }
