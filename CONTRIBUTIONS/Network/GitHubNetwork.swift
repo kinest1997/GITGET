@@ -40,7 +40,7 @@ struct GitHubNetwork {
     }
     
     func getContributions(of username: String) -> AnyPublisher<[Contribution], GitHubNetworkError> {
-        var request = URLRequest(url: URL(string: "https://github-contributions-api.jogruber.de/v4/\(username)")!)
+        var request = URLRequest(url: URL(string: "https://typescript.nestjs.kinest1997.com/github/contributions?username=\(username)&years=last")!)
         request.httpMethod = "GET"
         return session.dataTaskPublisher(for: request)
             .mapError({ _ in
@@ -48,7 +48,6 @@ struct GitHubNetwork {
             })
             .flatMap { data in
                 return Just(data.data)
-                    .print()
                     .decode(type: ContributionResponse.self, decoder: JSONDecoder())
                     .mapError { _ in
                         GitHubNetworkError.jsonDecodingError
@@ -60,7 +59,6 @@ struct GitHubNetwork {
                             }
                             .sorted { $0.date < $1.date }
                     }
-                    .print()
             }
             .eraseToAnyPublisher()
     }
